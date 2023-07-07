@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analyzer Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333333;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        p {
+            color: #cccccc;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #cccccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+    {% for result in results %}
+        <h3>Text: {{ result['text'] }}</h3>
+        <p>Sentiment: {{ result['sentiment'] }}</p>
+        <p>Category: {{ result['category'] }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
